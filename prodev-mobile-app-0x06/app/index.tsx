@@ -99,7 +99,11 @@ export default function Index() {
                 </Link>
               </View>
               <View style={{ alignItems: "center", paddingVertical: 20 }}>
-                <Text style={{ color: "white" }}>Continue to home</Text>
+                <Link href="/(home)" asChild>
+                  <Pressable>
+                    <Text style={{ color: "white" }}>Continue to home</Text>
+                  </Pressable>
+                </Link>
               </View>
             </View>
           </View>
