@@ -1,5 +1,6 @@
-import { Dimensions, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Dimensions, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View, Pressable } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
+import { Link } from "expo-router";
 
 const styles = StyleSheet.create({
   container: {
@@ -83,13 +84,17 @@ export default function Index() {
 
             <View style={{ position: "absolute", bottom: 0, width: "100%" }}>
               <View style={styles.buttonGroup}>
-                <TouchableOpacity style={styles.button}>
-                  <Text style={{ ...styles.textSmall, color: "black" }}>Join here</Text>
-                </TouchableOpacity>
+                <Link href="/join" style={styles.button}>
+                  <Pressable>
+                    <Text style={{ ...styles.textSmall, color: "black" }}>Join here</Text>
+                  </Pressable>
+                </Link>
 
-                <TouchableOpacity style={styles.transparentButton}>
-                  <Text style={styles.textSmall}>Sign In</Text>
-                </TouchableOpacity>
+                <Link href="/signin" style={styles.transparentButton}>
+                  <Pressable>
+                    <Text style={styles.textSmall}>Sign In</Text>
+                  </Pressable>
+                </Link>
               </View>
               <View style={{ alignItems: "center", paddingVertical: 20 }}>
                 <Text style={{ color: "white" }}>Continue to home</Text>

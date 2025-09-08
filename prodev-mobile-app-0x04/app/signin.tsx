@@ -1,15 +1,20 @@
-import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
+import { Text, TextInput, View, TouchableOpacity, Image, Pressable } from "react-native";
 import { styles } from "@/styles/_signinstyle";
 import { HEROLOGO } from "@/constants";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
+import { Link } from "expo-router";
 
 export default function Index() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <View style={styles.navGroup}>
-          <Ionicons name="arrow-back" size={25} />
+          <Link href="/">
+            <Pressable>
+              <Ionicons name="arrow-back" size={25} />
+            </Pressable>
+          </Link>
           <Image source={HEROLOGO} />
         </View>
         <Text style={styles.largeText}>Sign in to your</Text>
@@ -84,8 +89,12 @@ export default function Index() {
         </View>
 
         <View style={styles.subTextGroup}>
-          <Text style={styles.subText}>Don't have an account?</Text>
-          <Text style={styles.subTextJoin}>Join now</Text>
+          <Text style={styles.subText}>Already have an account?</Text>
+          <Link href="/signin">
+            <Pressable>
+              <Text style={styles.subTextJoin}>Signin now</Text>
+            </Pressable>
+          </Link>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>

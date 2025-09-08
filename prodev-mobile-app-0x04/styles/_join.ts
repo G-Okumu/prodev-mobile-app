@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
     },
     socialMediaButtonGroup: {
         gap: 15,
-        marginTop: 25
+        marginTop: 5
     },
     subTextJoin: {
         fontSize: 18,
