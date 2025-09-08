@@ -1,6 +1,6 @@
-import { Dimensions, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View, Pressable } from "react-native";
-import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { Link } from "expo-router";
+import { Dimensions, Image, ImageBackground, Pressable, StyleSheet, Text, View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 const styles = StyleSheet.create({
   container: {
